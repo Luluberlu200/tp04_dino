@@ -22,7 +22,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # ⬇️ fabrique le nom d'image en minuscules
       - name: Compute lowercase image name
         id: img
         run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
